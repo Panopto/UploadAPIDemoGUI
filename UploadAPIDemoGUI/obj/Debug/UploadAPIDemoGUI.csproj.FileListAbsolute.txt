@@ -1,0 +1,15 @@
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\bin\Debug\UploadAPIDemoGUI.exe.config
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\bin\Debug\UploadAPIDemoGUI.exe
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\bin\Debug\UploadAPIDemoGUI.pdb
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\bin\Debug\AWSSDK.dll
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\bin\Debug\AWSSDK.xml
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\obj\Debug\UploadAPIDemoGUI.csprojResolveAssemblyReference.cache
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\obj\Debug\MainWindow.baml
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\obj\Debug\MainWindow.g.cs
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\obj\Debug\App.g.cs
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\obj\Debug\UploadAPIDemoGUI_MarkupCompile.cache
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\obj\Debug\UploadAPIDemoGUI.g.resources
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\obj\Debug\UploadAPIDemoGUI.Properties.Resources.resources
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\obj\Debug\UploadAPIDemoGUI.csproj.GenerateResource.Cache
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\obj\Debug\UploadAPIDemoGUI.exe
+C:\Users\dliu\Documents\Visual Studio 2012\Projects\UploadAPIDemoGUI\UploadAPIDemoGUI\obj\Debug\UploadAPIDemoGUI.pdb
