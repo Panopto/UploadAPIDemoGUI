@@ -16,6 +16,8 @@ using System.Windows.Forms;
 using System.Security.Cryptography.X509Certificates;
 using System.Net;
 using UploadAPIDemo;
+using System.ComponentModel;
+using System.Timers;
 
 namespace UploadAPIDemoGUI
 {
@@ -27,6 +29,7 @@ namespace UploadAPIDemoGUI
         private static bool selfSigned = true; // Target server is a self-signed server
         private static bool hasBeenInitialized = false;
         private static long DEFAULT_PARTSIZE = 1048576; // Size of each upload in the multipart upload process
+        private static System.Timers.Timer timer;
 
         public MainWindow()
         {
@@ -63,33 +66,14 @@ namespace UploadAPIDemoGUI
         /// </summary>
         private void Upload_Click(object sender, RoutedEventArgs e)
         {
-            bool hasError = false;
-
             LockAllFields();
             Status.Content = "Uploading...";
 
-            try
-            {
-                Common.SetServer(Server.Text);
-                UploadAPIWrapper.UploadFile(
-                    UserID.Text,
-                    UserPassword.Password,
-                    FolderID.Text,
-                    SessionName.Text,
-                    FilePath.Text,
-                    DEFAULT_PARTSIZE);
-            }
-            catch (Exception ex) // error handling and status
-            {
-                hasError = true;
-                Status.Content = "Upload Failed: " + ex.Message;
-            }
+            Common.SetServer(Server.Text);
 
-            if (!hasError)
-            {
-                Status.Content = "Upload Successful";
-            }
-            FreeAllFields();
+            timer = new System.Timers.Timer(1500);
+            timer.Elapsed += ProcessUpload;
+            timer.Start();
         }
 
         /// <summary>
@@ -102,6 +86,8 @@ namespace UploadAPIDemoGUI
             UserPassword.IsEnabled = false;
             FolderID.IsEnabled = false;
             SessionName.IsEnabled = false;
+            Upload.IsEnabled = false;
+            Browse.IsEnabled = false;
         }
 
         /// <summary>
@@ -114,6 +100,44 @@ namespace UploadAPIDemoGUI
             UserPassword.IsEnabled = true;
             FolderID.IsEnabled = true;
             SessionName.IsEnabled = true;
+            Upload.IsEnabled = true;
+            Browse.IsEnabled = true;
+        }
+
+        /// <summary>
+        /// Calls the upload method and handles any error
+        /// </summary>
+        private void ProcessUpload(Object source, ElapsedEventArgs e)
+        {
+            timer.Stop();
+
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                bool hasError = false;
+
+                try
+                {
+                    UploadAPIWrapper.UploadFile(
+                        UserID.Text,
+                        UserPassword.Password,
+                        FolderID.Text,
+                        SessionName.Text,
+                        FilePath.Text,
+                        DEFAULT_PARTSIZE);
+                }
+                catch (Exception ex) // error handling and status
+                {
+                    hasError = true;
+                    Status.Content = "Upload Failed: " + ex.Message;
+                }
+
+                if (!hasError)
+                {
+                    Status.Content = "Upload Successful";
+                }
+
+                FreeAllFields();
+            }));
         }
 
         //========================= Needed to use self-signed servers

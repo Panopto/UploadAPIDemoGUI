@@ -21,6 +21,5 @@
             <Label x:Name="Status" Content="Ready to upload" Width="508" Height="30"/>
         </StatusBar>
         <Border BorderBrush="#FF259216" BorderThickness="3"/>
-        <Image Margin="410,10,10.4,217.4" Source="Logo-PanoptoGlobe.png" Stretch="Fill"/>
     </Grid>
 </Window>
